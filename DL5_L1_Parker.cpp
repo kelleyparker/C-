@@ -53,8 +53,7 @@ int main()
 			cout << "Please provide the height in inches (number should be lower than 12).\n";
 			cin >> heightInches;
 			heightInches = (heightFeet * 12) + heightInches;
-			double BMI = ((static_cast<double>(weightPounds) 
-				/ (static_cast<double>(heightInches * static_cast<double>(heightInches))) * 703));
+			double BMI = ((static_cast<double>(weightPounds) / (static_cast<double>(heightInches * static_cast<double>(heightInches))) * 703));
 				// This is the formula to calculate the body mass index.
 			cout << "The BMI is ";
 			printf("%.2f",BMI);  // Prints the BMI with two decimal places.
