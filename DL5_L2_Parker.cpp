@@ -20,11 +20,11 @@ int main()
         cin >> maxRows;  // User types in number of desired rows.
         for (int currentRow = 1; currentRow <= maxRows; currentRow++) {  // this outer for loop cycles through each row in the diamond
             for (int columnCount = 1; columnCount < maxRows+1; columnCount++) { // this inner for loop cycles through each column in given row
-                int row = abs( columnCount - (maxRows / 2 + 1 ));
-                int column = abs( currentRow - (maxRows / 2 + 1));
+                int row = abs (columnCount - (maxRows / 2 + 1 ));
+                int column = abs (currentRow - (maxRows / 2 + 1 ));
 
-                if ( abs(row + column) <= (maxRows / 2)) {
-                    cout << "*";
+                if (abs(row + column) <= (maxRows / 2)) {
+                    cout << "*";  // insert a star if the absolute value of the sum of the row and column counters are less than or equal to the user's desired rows divided by 2
                 }
                 else {
                     cout << " ";
@@ -39,70 +39,52 @@ int main()
 }
 
 /* ============================SAMPLE OUTPUT============================
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
+How many rows do you want in your diamond?  Type in 0 or lower to quit.  
+
+5
+  *  
+ *** 
+*****
+ *** 
+  *  
+How many rows do you want in your diamond?  Type in 0 or lower to quit.  
+
+4
+  * 
+ ***
+****
+ ***
+How many rows do you want in your diamond?  Type in 0 or lower to quit.  
+
+3
+ * 
+***
+ * 
+How many rows do you want in your diamond?  Type in 0 or lower to quit.  
 
 1
 *
-
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
-
-2
- *
-***
- *
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
+How many rows do you want in your diamond?  Type in 0 or lower to quit.  
 
 4
-  *
+  * 
  ***
-*****
+****
  ***
-  *
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
-
-5
-  *
- ***
-*****
- ***
-  *
-
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
-
-7
-   *
-  ***
- *****
-*******
- *****
-  ***
-   *
-
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
+How many rows do you want in your diamond?  Type in 0 or lower to quit.  
 
 9
-    *
-   ***
-  *****
- *******
+    *    
+   ***   
+  *****  
+ ******* 
 *********
- *******
-  *****
-   ***
-    *
-
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
-
-3
- *
-***
- *
-
-How many rows do you want in your diamond?  Type in 0 or lower to quit.
+ ******* 
+  *****  
+   ***   
+    *    
+How many rows do you want in your diamond?  Type in 0 or lower to quit.  
 
 0
-*
 You typed in 0 or lower.  Program will now terminate.
-
-
 */
