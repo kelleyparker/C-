@@ -1,0 +1,4 @@
+Feedback to Learner
+6/10/16 3:43 PM
+L1 (6/1): Avoid uninitialized variables (see lines 28-31), wait until needed to declare new variables.  Ignores case, formats amount, but uses printf, expected cout<<.  Correct results, tested.
+
