@@ -1,10 +1,3 @@
-// Author:                      Kelley Parker
-// Assignment Number:           Lab 01
-// File Name:                   DL5_L1_Parker.cpp
-// Course/Section:              COSC 1337 Section 005
-// Due Date:                    June 8, 2016
-// Instructor:                  Paul Thayer
-//
 // This program calculates your restaurant bill and your body max index (BMI).
 
 #include <iostream>
