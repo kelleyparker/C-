@@ -6,6 +6,23 @@
 // Instructor:                  Paul Thayer
 //
 // This program computers the time in seconds for sound to travel X feet through either air, water, or steel.
+//
+// DETAILED OVERVIEW
+// -----------------
+// Sound travels at a different speed in each material, so the time it takes to cover
+// a distance depends on the material:
+//     time (seconds) = distance (feet) / speed (feet per second)
+// The speeds used by this program are:
+//     air   = 1100 ft/s     water = 4900 ft/s     steel = 16400 ft/s
+// Program flow:
+//   1. Show a menu: a)ir, w)ater, s)teel, q)uit (upper or lower case both work).
+//   2. A switch statement stores the speed for the chosen material. An invalid letter
+//      prints an error and returns to the menu.
+//   3. Ask for a distance in feet. Negative distances are rejected and the question is
+//      asked again until a non-negative value is entered.
+//   4. Print the travel time, then return to the menu. Only 'q' ends the program.
+// Concepts practiced: enum with character values, switch / case, nested do/while loops,
+// and 'continue' to jump back to the top of a loop.
 
 #include <iostream>
 
@@ -14,9 +31,11 @@ using namespace std;
 int main()
 {
 
-    double distanceFeet, timeInSeconds;
-    int speed;
-    char letterSelection;
+    double distanceFeet, timeInSeconds; // Input distance and the calculated result.
+    int speed;                          // Speed of sound (ft/s) for the chosen material.
+    char letterSelection;               // The menu letter the user typed.
+    // Each enum name is assigned a character code, so the case labels in the switch below
+    // can be written as words (air, water, ...) instead of raw characters ('a', 'w', ...).
     enum material {air = 'a', water = 'w', steel = 's', quit = 'q'};
 
     do {
@@ -32,25 +51,27 @@ int main()
 
             case quit:
                 cout << "\nYou typed in Q.  The program will now terminate.\n";
-                return 0;
+                return 0; // Leaves main, which ends the program.
 
             case air:
-                speed = 1100;
+                speed = 1100;  // feet per second in air
                 break;
 
             case water:
-                speed = 4900;
+                speed = 4900;  // feet per second in water
                 break;
 
             case steel:
-                speed = 16400;
+                speed = 16400; // feet per second in steel
                 break;
 
             default:
                 cout << "Invalid choice.  Please choose an available material: \n" << endl;
-                continue;
+                continue; // Skip the distance question and go back to the menu.
+                          // In a do/while, continue jumps to the loop condition (true), so it repeats.
         }
 
+        // Inner loop: keeps asking for a distance until the user gives a valid (non-negative) one.
         do {
 
             cout << "What is the distance in feet?\n";
